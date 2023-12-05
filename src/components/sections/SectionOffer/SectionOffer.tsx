@@ -1,20 +1,58 @@
-import {FC, JSX}           from 'react';
-import {SiteColorsEnum}    from '../../../enums/SiteColorsEnum';
-
+import {FC, JSX} from 'react';
+import {SiteColorsEnum} from '../../../enums/SiteColorsEnum';
 import {tel, whatsAppLink} from '../../../globalParams';
+import {domAnimation, LazyMotion, m} from 'framer-motion';
+import Wrapper from '../../common/Wrapper/Wrapper';
+import PaintedText from '../../common/PaintedText/PaintedText';
+import classNames from 'classnames';
+import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
+import styles from './SectionOffer.module.scss';
+import ImageStation from '../../../assets/images/offer/station_1.jpeg';
+import {useInView} from 'react-intersection-observer';
+import {IOfferListData, offerListData} from './OfferListData';
 
-import Wrapper             from '../../common/Wrapper/Wrapper';
-import PaintedText         from '../../common/PaintedText/PaintedText';
-import classNames          from 'classnames';
-import PrimaryBtn          from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
-
-import styles              from './SectionOffer.module.scss';
-import ImageStation        from '../../../assets/images/offer/station_1.jpeg';
 
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {
+    /** Хук наблюдателя пересечений изображения станции. */
+    const [refStation, inViewStation] = useInView({triggerOnce: true})
+
+    /** Хук наблюдателя пересечений списка. */
+    const [refList, inViewList] = useInView({triggerOnce: true})
+
+    /** Хук наблюдателя пересечений изображения заголовка. */
+    const [refTitle, inViewTitle] = useInView({triggerOnce: true})
+
+    /** Хук наблюдателя пересечений изображения описания. */
+    const [refDescription, inViewDescription] = useInView({triggerOnce: true})
+
+    /** Анимация изображения. */
+    const animationImage = {
+        visible: {opacity: 1, x: 0, transition: {duration: 0.6}},
+        hidden: {opacity: 0, x: 200, transition: {duration: 0.6}},
+    };
+
+    /** Анимация списка. */
+    const animationList = {
+        visible: (index: number): object => ({opacity: 1, transition: {delay: index * 0.2, duration: .5}}),
+        hidden: {opacity: 0, transition: {duration: 0.6}},
+    }
+
+    /** Анимация заголовка. */
+    const animationTitle = {
+        visible: {scale: 1, x: 0, transition: {duration: .5}},
+        hidden: {scale: 0.1, x: -100, transition: {duration: 0.6}},
+    }
+
+    /** Анимация описания. */
+    const animationDescription = {
+        visible: {x: 0, opacity: 1, transition: {duration: .5}},
+        hidden: {x: -600, opacity: 0, transition: {duration: 0.6}},
+    }
+
     return (
-        <section className={styles.offer}>
+    <section className={styles.offer}>
+        <LazyMotion features={domAnimation}>
             <Wrapper>
                 <div className={styles.tagline}>
                     <span className={styles.taglineText}>
@@ -22,35 +60,46 @@ const SectionOffer: FC = (): JSX.Element => {
                     </span>
                 </div>
 
-                <h1 className={styles.title}>
+                <m.h1
+                className={styles.title}
+                ref={refTitle}
+                initial="hidden"
+                animate={inViewTitle ? 'visible' : 'hidden'}
+                variants={animationTitle}
+                >
                     Механизированная штукатурка стен
-                </h1>
+                </m.h1>
 
-                <p className={styles.description}>
+                <m.p
+                className={styles.description}
+                ref={refDescription}
+                initial="hidden"
+                animate={inViewDescription ? 'visible' : 'hidden'}
+                variants={animationDescription}
+                >
                     При заказе механизированной штукатурки у нас —
                     Вы получаете материал
                     <PaintedText color={SiteColorsEnum.PRIMARY}>
                         по оптовой цене
                     </PaintedText>
-                </p>
+                </m.p>
 
                 <ul className={styles.list}>
-                    <li className={styles.item}>
-                        <span className={classNames(styles.item, styles.iconTypeCity)}>
-                            Владивосток и Приморский край
-                        </span>
-                    </li>
-                    <li className={styles.item}>
-                        <span className={classNames(styles.item, styles.iconTypePrice)}>
-                            Цена от 299р за квадрат
-                        </span>
-
-                    </li>
-                    <li className={styles.item}>
-                        <span className={classNames(styles.item, styles.iconTypeGuaranty)}>
-                            Гарантия 3 года
-                        </span>
-                    </li>
+                    {offerListData.map((item: IOfferListData) => (
+                    <m.li
+                    key={'sectionOfferList_' + item.id}
+                    className={styles.item}
+                    ref={refList}
+                    initial="hidden"
+                    animate={inViewList ? 'visible' : 'hidden'}
+                    variants={animationList}
+                    custom={item.id}
+                    >
+                            <span className={classNames(styles.item, styles[`iconType${item.icon}`])}>
+                                {item.text}
+                            </span>
+                    </m.li>
+                    ))}
                 </ul>
 
                 <div className={styles.buttons}>
@@ -66,17 +115,21 @@ const SectionOffer: FC = (): JSX.Element => {
                     </PrimaryBtn>
                 </div>
             </Wrapper>
-
             <div className={styles.stationBox}>
-                <img
+                <m.img
                 src={ImageStation}
                 alt="Механизированная штукатурная станция"
                 className={styles.img}
+                ref={refStation}
+                initial="hidden"
+                animate={inViewStation ? 'visible' : 'hidden'}
+                variants={animationImage}
                 />
             </div>
 
-            <div className={styles.bottomEffect} />
-        </section>
+            <div className={styles.bottomEffect}/>
+        </LazyMotion>
+    </section>
     );
 }
 
