@@ -6,6 +6,9 @@ interface IProps {
     /** Цвет текста. */
     color:    SiteColorsEnum;
 
+    /** Имя класса. */
+    className?: string;
+
     /** Вложенная нода. */
     children: ReactNode;
 }
@@ -15,9 +18,13 @@ const PaintedText: FC<IProps> = (
 {
     color,
     children,
+    className,
 }): JSX.Element => {
     return (
-        <span style={{color: color}}>
+        <span
+        style={{color: color}}
+        className={className ?? ''}
+        >
             &nbsp;{children}&nbsp;
         </span>
     );
