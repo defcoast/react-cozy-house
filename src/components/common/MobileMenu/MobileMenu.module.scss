@@ -1,5 +1,5 @@
-@import '../../assets/styles/adaptive';
-@import '../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
 
 .mobileMenu {
 	width:         100%;
@@ -41,7 +41,7 @@
 	gap:         0 5px;
 
 	&:before {
-		content: url('../../assets/images/header/phone.svg');
+		content: url('../../../assets/images/header/phone.svg');
 		display: block;
 		width:   18px;
 		height:  18px;

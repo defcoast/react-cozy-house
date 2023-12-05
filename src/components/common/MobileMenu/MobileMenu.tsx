@@ -5,7 +5,7 @@ import {navigationData} from '../Navigation/NavigationData';
 import Tel from '../Tel/Tel';
 import SocialList from '../SocialList/SocialList';
 import {socialListData} from '../SocialList/SocialListData';
-import PrimaryBtn from '../UI/buttons/PrimaryBtn/PrimaryBtn';
+import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
 
 /** Интерфейс пропсов компонента. */
 interface IProps {

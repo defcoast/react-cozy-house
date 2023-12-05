@@ -12,6 +12,9 @@ interface IProps {
 
     /** Корневой класс компонента. */
     className?: string;
+
+    /** Таргет. */
+    target?:     string;
 }
 
 /** Основная кнопка. */
@@ -19,12 +22,15 @@ const PrimaryBtn: FC<IProps> = (
 {
     href,
     children,
-    className
+    className,
+    target,
 }): JSX.Element => {
     return (
         <a
         href={href}
         className={classNames(styles.btn, className)}
+        target={target ? target : '_self'}
+        rel="noreferrer"
         >
             {children}
         </a>

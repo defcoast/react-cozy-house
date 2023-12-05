@@ -1,6 +1,6 @@
 import {FC, JSX} from 'react';
 
-import imageLogo from '../../assets/images/logo.svg'
+import imageLogo from '../../../assets/images/logo.svg'
 
 /** Интерфейс пропсов компонента. */
 interface IProps {

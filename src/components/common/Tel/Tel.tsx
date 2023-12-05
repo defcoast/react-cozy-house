@@ -1,5 +1,5 @@
 import {FC, JSX} from 'react';
-import {tel} from '../../globalParams';
+import {tel} from '../../../globalParams';
 
 /** Интерфейс пропсов компонента. */
 interface IProps {

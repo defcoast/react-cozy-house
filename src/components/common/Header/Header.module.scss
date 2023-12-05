@@ -1,5 +1,5 @@
-@import '../../assets/styles/palette';
-@import '../../assets/styles/adaptive';
+@import '../../../assets/styles/palette';
+@import '../../../assets/styles/adaptive';
 
 .header {
 	width:            100%;
@@ -77,7 +77,7 @@
 	text-align:  center;
 
 	&:before {
-		content: url('../../assets/images/header/online.svg');
+		content: url('../../../assets/images/header/online.svg');
 		width:   20px;
 		height:  20px;
 		display: block;
@@ -85,7 +85,7 @@
 }
 
 .burger {
-	content: url('../../assets/images/header/burger.svg');
+	content: url('../../../assets/images/header/burger.svg');
 	display: none;
 	width:   50px;
 	height:  24px;
