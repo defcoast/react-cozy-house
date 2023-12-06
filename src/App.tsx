@@ -5,6 +5,7 @@ import SectionOffer from './components/sections/SectionOffer/SectionOffer';
 import SectionBenefits from './components/sections/SectionBenefits/SectionBenefits';
 import SectionAbout from './components/sections/SectionAbout/SectionAbout';
 import SectionSteps from './components/sections/SectionSteps/SectionSteps';
+import SectionEquipment from './components/sections/SectionEquipment/SectionEquipment';
 
 /** Корневой компонент приложения. */
 const App: FC = (): JSX.Element => {
@@ -16,6 +17,7 @@ const App: FC = (): JSX.Element => {
                 <SectionBenefits />
                 <SectionAbout />
                 <SectionSteps />
+                <SectionEquipment />
             </main>
         </>
     );
