@@ -1,6 +1,7 @@
 /** Список основных цветов в проекте. */
 export enum SiteColorsEnum {
-    PRIMARY    = '#ffb000',
     WHITE      = '#fff',
+    BLACK      = '#000',
+    PRIMARY    = '#ffb000',
     NEON_GREEN = '#23e518',
 }

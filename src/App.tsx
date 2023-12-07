@@ -6,6 +6,7 @@ import SectionBenefits from './components/sections/SectionBenefits/SectionBenefi
 import SectionAbout from './components/sections/SectionAbout/SectionAbout';
 import SectionSteps from './components/sections/SectionSteps/SectionSteps';
 import SectionEquipment from './components/sections/SectionEquipment/SectionEquipment';
+import SectionExample from './components/sections/SectionExample/SectionExample';
 
 /** Корневой компонент приложения. */
 const App: FC = (): JSX.Element => {
@@ -18,6 +19,7 @@ const App: FC = (): JSX.Element => {
                 <SectionAbout />
                 <SectionSteps />
                 <SectionEquipment />
+                <SectionExample />
             </main>
         </>
     );
