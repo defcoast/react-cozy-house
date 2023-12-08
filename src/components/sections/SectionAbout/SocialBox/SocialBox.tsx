@@ -1,7 +1,7 @@
 import {FC, JSX} from 'react';
 import styles from './SocialBox.module.scss';
 import SocialList from '../../../common/SocialList/SocialList';
-import {socialListData} from '../../../common/SocialList/SocialListData';
+import {socialListData} from '../../../../models/SocialListData';
 
 /** Блок социальных сетей. */
 const SocialBox: FC = (): JSX.Element => {

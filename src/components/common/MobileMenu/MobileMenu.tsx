@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import {navigationData} from '../Navigation/NavigationData';
 import Tel from '../Tel/Tel';
 import SocialList from '../SocialList/SocialList';
-import {socialListData} from '../SocialList/SocialListData';
+import {socialListData} from '../../../models/SocialListData';
 import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
 
 /** Интерфейс пропсов компонента. */

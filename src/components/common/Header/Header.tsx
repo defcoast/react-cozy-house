@@ -8,7 +8,7 @@ import SocialList from '../SocialList/SocialList';
 import MobileMenu from '../MobileMenu/MobileMenu';
 
 import {navigationData} from '../Navigation/NavigationData';
-import {socialListData} from '../SocialList/SocialListData';
+import {socialListData} from '../../../models/SocialListData';
 
 import styles from './Header.module.scss';
 

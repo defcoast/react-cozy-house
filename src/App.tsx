@@ -10,6 +10,7 @@ import SectionExample from './components/sections/SectionExample/SectionExample'
 import SectionNumbers from './components/sections/SectionNumbers/SectionNumbers';
 import SectionAdditional from './components/sections/SectionAdditional/SectionAdditional';
 import SectionAction from './components/sections/SectionAction/SectionAction';
+import Footer from './components/common/Footer/Footer';
 
 /** Корневой компонент приложения. */
 const App: FC = (): JSX.Element => {
@@ -26,6 +27,7 @@ const App: FC = (): JSX.Element => {
                 <SectionNumbers />
                 <SectionAdditional />
                 <SectionAction />
+                <Footer />
             </main>
         </>
     );

@@ -1,10 +1,10 @@
-import {SocialsListData} from './ISocialListData';
+import {SocialsListData} from '../components/common/SocialList/ISocialListData';
 
-import {instagramLink, telegramLink, whatsAppLink} from '../../../globalParams';
+import {instagramLink, telegramLink, whatsAppLink} from '../globalParams';
 
-import ImageTelegramLogo  from '../../../assets/images/socials/telegram.png'
-import ImageInstagramLogo from '../../../assets/images/socials/instagram.png'
-import ImageWhatsAppLogo  from '../../../assets/images/socials/whatsApp.png'
+import ImageTelegramLogo  from '../assets/images/socials/telegram.png'
+import ImageInstagramLogo from '../assets/images/socials/instagram.png'
+import ImageWhatsAppLogo  from '../assets/images/socials/whatsApp.png'
 
 /** Данные для списка социальных сетей. */
 export const socialListData: SocialsListData[] = [
