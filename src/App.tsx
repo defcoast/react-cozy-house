@@ -9,6 +9,7 @@ import SectionEquipment from './components/sections/SectionEquipment/SectionEqui
 import SectionExample from './components/sections/SectionExample/SectionExample';
 import SectionNumbers from './components/sections/SectionNumbers/SectionNumbers';
 import SectionAdditional from './components/sections/SectionAdditional/SectionAdditional';
+import SectionAction from './components/sections/SectionAction/SectionAction';
 
 /** Корневой компонент приложения. */
 const App: FC = (): JSX.Element => {
@@ -24,6 +25,7 @@ const App: FC = (): JSX.Element => {
                 <SectionExample />
                 <SectionNumbers />
                 <SectionAdditional />
+                <SectionAction />
             </main>
         </>
     );

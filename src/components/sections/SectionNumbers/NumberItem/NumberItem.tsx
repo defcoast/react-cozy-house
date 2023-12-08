@@ -23,6 +23,7 @@ const NumberItem: FC<IProps> = ({numberData}): JSX.Element => {
     return (
     <LazyMotion features={domAnimation}>
         <m.li
+        key={numberData.id}
         className={styles.numberBox}
         ref={refList}
         initial="hidden"
