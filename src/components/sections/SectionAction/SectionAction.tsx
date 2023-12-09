@@ -4,7 +4,7 @@ import styles from './SectionAction.module.scss';
 import AnimationTitle from '../../common/AnimationTitle/AnimationTitle';
 import PaintedText from '../../common/PaintedText/PaintedText';
 import {SiteColorsEnum} from '../../../enums/SiteColorsEnum';
-import ImageBrigade from '../../../assets/images/action/brigade.png';
+import ImageBrigade from '../../../assets/images/action/brigade.webp';
 import {m, domAnimation, LazyMotion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 import ActionForm from './ActionForm/ActionForm';

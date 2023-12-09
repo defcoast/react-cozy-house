@@ -7,10 +7,9 @@ import PaintedText from '../../common/PaintedText/PaintedText';
 import classNames from 'classnames';
 import PrimaryBtn from '../../UI/buttons/PrimaryBtn/PrimaryBtn';
 import styles from './SectionOffer.module.scss';
-import ImageStation from '../../../assets/images/offer/station_1.jpeg';
+import ImageStation from '../../../assets/images/offer/station_1.webp';
 import {useInView} from 'react-intersection-observer';
 import {IOfferListData, offerListData} from './OfferListData';
-
 
 /** Секция "Оффер". */
 const SectionOffer: FC = (): JSX.Element => {

@@ -3,7 +3,7 @@ import {m, domAnimation, LazyMotion} from 'framer-motion';
 import styles from '../SectionAbout.module.scss';
 import PaintedText from '../../../common/PaintedText/PaintedText';
 import {SiteColorsEnum} from '../../../../enums/SiteColorsEnum';
-import ImageStation from '../../../../assets/images/about/station_1.png'
+import ImageStation from '../../../../assets/images/about/station_1.webp'
 import {useInView} from 'react-intersection-observer';
 
 /** Блок "Что такое механизированная штукатурка". */

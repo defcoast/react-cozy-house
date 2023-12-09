@@ -1,6 +1,6 @@
 import {IEquipmentData} from './IEquipmentData';
-import ImageStation1 from '../../../assets/images/equipment/station_1.jpeg'
-import ImageStation2 from '../../../assets/images/equipment/station_3.png'
+import ImageStation1 from '../../../assets/images/equipment/station_1.webp'
+import ImageStation2 from '../../../assets/images/equipment/station_3.webp'
 
 
 /** Данные для оборудования. */

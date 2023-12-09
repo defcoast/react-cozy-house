@@ -9,7 +9,7 @@
 }
 
 .tagline {
-	background:      url('../../../assets/images/offer/tagline.png') no-repeat;
+	background:      url('../../../assets/images/offer/tagline.webp') no-repeat;
 	width:           330px;
 	height:          44px;
 	display:         flex;
@@ -130,19 +130,19 @@
 	&Type {
 		&City {
 			&:before {
-				content: url('../../../assets/images/offer/offer-geo.png');
+				content: url('../../../assets/images/offer/offer-geo.webp');
 			}
 		}
 
 		&Price {
 			&:before {
-				content: url('../../../assets/images/offer/offer-price.png');
+				content: url('../../../assets/images/offer/offer-price.webp');
 			}
 		}
 
 		&Guaranty {
 			&:before {
-				content: url('../../../assets/images/offer/offer-garant.png');
+				content: url('../../../assets/images/offer/offer-garant.webp');
 			}
 		}
 	}
@@ -155,7 +155,7 @@
 .bottomEffect {
 	width:      100%;
 	height:     180px;
-	background: url('../../../assets/images/offer/offer-bottom-effect.png');
+	background: url('../../../assets/images/offer/offer-bottom-effect.webp');
 
 	@include tablet {
 		margin-top: -210px;
