@@ -75,7 +75,10 @@ const Footer: FC = (): JSX.Element => {
             </nav>
 
             <div>
-                <SocialList socialListData={socialListData}/>
+                <SocialList
+                socialListData={socialListData}
+                className={styles.socialsList}
+                />
 
                 <span className={styles.socialsText}>
 					Следите за новостями, акциями и скидками, в наших социальных сетях

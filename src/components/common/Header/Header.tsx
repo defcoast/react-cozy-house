@@ -29,7 +29,10 @@ const Header: FC = (): JSX.Element => {
                 <Logo className={styles.logo} />
 
                 {/** Список социальных сетей. */}
-                <SocialList socialListData={socialListData} />
+                <SocialList
+                socialListData={socialListData}
+                className={styles.socials}
+                />
 
                 {/** Номер телефона. */}
                 <div className={styles.numberBox}>
