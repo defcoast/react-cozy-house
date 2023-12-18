@@ -18,31 +18,31 @@ export interface IExampleImagesData {
 export const exampleImages: IExampleImagesData[] = [
     {
         preview:  ImagePreview1,
-        original: '/images/ex_1.jpg',
+        original: '/images/ex-1.webp',
     },
 
     {
         preview:  ImagePreview2,
-        original: '/images/ex_2.jpg',
+        original: '/images/ex-2.webp',
     },
 
     {
         preview:  ImagePreview3,
-        original: '/images/ex_3.jpg',
+        original: '/images/ex-3.webp',
     },
 
     {
         preview:  ImagePreview4,
-        original: '/images/ex_4.jpg',
+        original: '/images/ex-4.webp',
     },
 
     {
         preview:  ImagePreview5,
-        original: '/images/ex_5.jpg',
+        original: '/images/ex-5.webp',
     },
 
     {
         preview:  ImagePreview6,
-        original: '/images/ex_6.jpg',
+        original: '/images/ex-6.webp',
     },
 ];
