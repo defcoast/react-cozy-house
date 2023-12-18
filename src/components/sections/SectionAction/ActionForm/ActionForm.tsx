@@ -235,6 +235,7 @@ const ActionForm: FC = (): JSX.Element => {
 
         <input
         type="text"
+        inputMode="numeric"
         className={styles.input}
         id="input-phone"
         name="phone"
