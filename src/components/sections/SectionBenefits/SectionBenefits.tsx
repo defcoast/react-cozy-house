@@ -23,6 +23,7 @@ const SectionBenefits: FC = (): JSX.Element => {
                 <ul className={styles.list}>
                     {benefitsData.map((benefit: IBenefitsData, index: number) => (
                        <BenefitItem
+                       key={'benefit_' + benefit.id}
                        benefit={benefit}
                        index={index}
                        />

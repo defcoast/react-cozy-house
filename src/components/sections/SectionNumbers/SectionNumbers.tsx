@@ -22,7 +22,10 @@ const SectionNumbers: FC = (): JSX.Element => {
 
             <ul className={styles.list}>
                 {NumberData.map((number: INumberData) => (
-                    <NumberItem numberData={number} />
+                    <NumberItem
+                    key={'number_' + number.id}
+                    numberData={number}
+                    />
                 ))}
             </ul>
         </Wrapper>

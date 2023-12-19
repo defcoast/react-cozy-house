@@ -22,7 +22,10 @@ const SectionEquipment: FC = (): JSX.Element => {
 
                 <ul className={styles.list}>
                     {EquipmentData.map((equipment: IEquipmentData) => (
-                        <EquipmentItem equipment={equipment} />
+                        <EquipmentItem
+                        key={'equipment_' + equipment.id}
+                        equipment={equipment}
+                        />
                     ))}
                 </ul>
             </Wrapper>

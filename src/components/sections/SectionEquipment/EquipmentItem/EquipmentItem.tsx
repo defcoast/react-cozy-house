@@ -33,8 +33,11 @@ const EquipmentItem: FC<IProps> = ({equipment}): JSX.Element => {
                 {equipment.title}
             </h3>
 
-            {equipment.descriptionPoints.map((description: string) => (
-                <p className={styles.description}>
+            {equipment.descriptionPoints.map((description: string, index: number) => (
+                <p
+                key={'equipment-des_' + index}
+                className={styles.description}
+                >
                     {description}
                 </p>
             ))}
