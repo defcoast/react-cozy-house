@@ -23,7 +23,10 @@ const SectionAdditional: FC = (): JSX.Element => {
 
             <ul className={styles.list}>
                 {AdditionalData.map((additional: IAdditionalData) => (
-                    <AdditionalItem additional={additional} />
+                    <AdditionalItem
+                    key={'additional_' + additional.id}
+                    additional={additional}
+                    />
                 ))}
             </ul>
         </Wrapper>

@@ -22,7 +22,10 @@ const SectionSteps: FC = (): JSX.Element => {
 
             <ul className={styles.list}>
                 {StepData.map((step: IStepData) => (
-                    <StepItem step={step} />
+                    <StepItem
+                    key={'step_' + step.id}
+                    step={step}
+                    />
                 ))}
             </ul>
         </Wrapper>
